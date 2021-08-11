@@ -1,0 +1,9 @@
+
+Log Entry : 4:38:05 PM Thursday, September 20, 2018
+  :
+  :Message: Thread was being aborted.
+ Source: BRSReadout
+ Stack Trace:    at Camera.startFrameGrab(Int32 nr, Int32 trigmode, dataDelegate dd, String cameraType) in C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\Camera.cs:line 135
+ Target: Void startFrameGrab(Int32, Int32, dataDelegate, System.String)
+ 
+-------------------------------

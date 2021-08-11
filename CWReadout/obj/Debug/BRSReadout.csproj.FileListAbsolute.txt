@@ -1,0 +1,64 @@
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\bin\Debug\BRSReadout.exe.config
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\bin\Debug\BRSReadout.exe
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\bin\Debug\BRSReadout.pdb
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\bin\Debug\TwinCAT.Ads.xml
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\obj\Debug\BRSReadout.Properties.Resources.resources
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\obj\Debug\BRSReadout.csproj.GenerateResource.Cache
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\obj\Debug\BRSReadout.exe
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\obj\Debug\BRSReadout.pdb
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\obj\Debug\BRSReadout.Form1.resources
+C:\Users\Eotwash\Documents\BRSReadout\BRSReadout\bin\Debug\BRSReadout.exe.config
+C:\Users\Eotwash\Documents\BRSReadout\BRSReadout\bin\Debug\BRSReadout.exe
+C:\Users\Eotwash\Documents\BRSReadout\BRSReadout\bin\Debug\BRSReadout.pdb
+C:\Users\Eotwash\Documents\BRSReadout\BRSReadout\bin\Debug\TwinCAT.Ads.dll
+C:\Users\Eotwash\Documents\BRSReadout\BRSReadout\bin\Debug\TwinCAT.Ads.xml
+C:\Users\Eotwash\Documents\BRSReadout\BRSReadout\obj\Debug\BRSReadout.Form1.resources
+C:\Users\Eotwash\Documents\BRSReadout\BRSReadout\obj\Debug\BRSReadout.Properties.Resources.resources
+C:\Users\Eotwash\Documents\BRSReadout\BRSReadout\obj\Debug\BRSReadout.csproj.GenerateResource.Cache
+C:\Users\Eotwash\Documents\BRSReadout\BRSReadout\obj\Debug\BRSReadout.exe
+C:\Users\Eotwash\Documents\BRSReadout\BRSReadout\obj\Debug\BRSReadout.pdb
+C:\Users\Eotwash\Documents\BRSReadout\BRSReadout\obj\Debug\BRSReadout.csprojResolveAssemblyReference.cache
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\obj\Debug\BRSReadout.Form1.resources
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\obj\Debug\BRSReadout.Properties.Resources.resources
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\obj\Debug\BRSReadout.csproj.GenerateResource.cache
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\obj\Debug\BRSReadout.csproj.CoreCompileInputs.cache
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\obj\Debug\BRSReadout.exe
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\obj\Debug\BRSReadout.pdb
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\bin\Debug\BRSReadout.exe.config
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\bin\Debug\BRSReadout.exe
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\bin\Debug\BRSReadout.pdb
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\bin\Debug\PylonC.NET.dll
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\bin\Debug\PylonC.NET.xml
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\obj\Debug\BRSReadout.csproj.CopyComplete
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\obj\Debug\BRSReadout.Form2.resources
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\bin\Debug\TwinCAT.Ads.dll
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\bin\Debug\TwinCAT.Ads.xml
+C:\Users\mross\OneDrive\Desktop\brs\BRSReadout\BRSReadout\obj\Debug\BRSReadout.csprojAssemblyReference.cache
+C:\Users\controls\Downloads\BRSReadout\BRSReadout\BRSReadout\bin\Debug\BRSReadout.exe.config
+C:\Users\controls\Downloads\BRSReadout\BRSReadout\BRSReadout\obj\Debug\BRSReadout.exe
+C:\Users\controls\Downloads\BRSReadout\BRSReadout\BRSReadout\obj\Debug\BRSReadout.pdb
+C:\Users\controls\Downloads\BRSReadout\BRSReadout\BRSReadout\bin\Debug\BRSReadout.exe
+C:\Users\controls\Downloads\BRSReadout\BRSReadout\BRSReadout\bin\Debug\BRSReadout.pdb
+C:\Users\controls\Downloads\BRSReadout\BRSReadout\BRSReadout\bin\Debug\PylonC.NET.dll
+C:\Users\controls\Downloads\BRSReadout\BRSReadout\BRSReadout\bin\Debug\TwinCAT.Ads.dll
+C:\Users\controls\Downloads\BRSReadout\BRSReadout\BRSReadout\bin\Debug\PylonC.NET.xml
+C:\Users\controls\Downloads\BRSReadout\BRSReadout\BRSReadout\bin\Debug\TwinCAT.Ads.xml
+C:\Users\controls\Downloads\BRSReadout\BRSReadout\BRSReadout\obj\Debug\BRSReadout.Form1.resources
+C:\Users\controls\Downloads\BRSReadout\BRSReadout\BRSReadout\obj\Debug\BRSReadout.Form2.resources
+C:\Users\controls\Downloads\BRSReadout\BRSReadout\BRSReadout\obj\Debug\BRSReadout.Properties.Resources.resources
+C:\Users\controls\Downloads\BRSReadout\BRSReadout\BRSReadout\obj\Debug\BRSReadout.csproj.GenerateResource.Cache
+C:\Users\controls\Downloads\BRSReadout\BRSReadout\BRSReadout\obj\Debug\BRSReadout.csprojResolveAssemblyReference.cache
+C:\SlowControls\BRS2 C#\BRSReadout\BRSReadout\BRSReadout\bin\Debug\BRSReadout.exe.config
+C:\SlowControls\BRS2 C#\BRSReadout\BRSReadout\BRSReadout\obj\Debug\BRSReadout.exe
+C:\SlowControls\BRS2 C#\BRSReadout\BRSReadout\BRSReadout\obj\Debug\BRSReadout.pdb
+C:\SlowControls\BRS2 C#\BRSReadout\BRSReadout\BRSReadout\bin\Debug\BRSReadout.exe
+C:\SlowControls\BRS2 C#\BRSReadout\BRSReadout\BRSReadout\bin\Debug\BRSReadout.pdb
+C:\SlowControls\BRS2 C#\BRSReadout\BRSReadout\BRSReadout\bin\Debug\PylonC.NET.dll
+C:\SlowControls\BRS2 C#\BRSReadout\BRSReadout\BRSReadout\bin\Debug\TwinCAT.Ads.dll
+C:\SlowControls\BRS2 C#\BRSReadout\BRSReadout\BRSReadout\bin\Debug\PylonC.NET.xml
+C:\SlowControls\BRS2 C#\BRSReadout\BRSReadout\BRSReadout\bin\Debug\TwinCAT.Ads.xml
+C:\SlowControls\BRS2 C#\BRSReadout\BRSReadout\BRSReadout\obj\Debug\BRSReadout.Form1.resources
+C:\SlowControls\BRS2 C#\BRSReadout\BRSReadout\BRSReadout\obj\Debug\BRSReadout.Form2.resources
+C:\SlowControls\BRS2 C#\BRSReadout\BRSReadout\BRSReadout\obj\Debug\BRSReadout.Properties.Resources.resources
+C:\SlowControls\BRS2 C#\BRSReadout\BRSReadout\BRSReadout\obj\Debug\BRSReadout.csproj.GenerateResource.Cache

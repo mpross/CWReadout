@@ -1,0 +1,281 @@
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\fftwlib.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\ZedGraph.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\ZedGraph.xml
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\obj\Debug\FringeAutocollimator.Form1.resources
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\obj\Debug\FringeAutocollimator.Properties.Resources.resources
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\obj\Debug\FringeAutocollimator.csproj.GenerateResource.Cache
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe.manifest
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.application
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe.manifest
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.application
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\NPL\Documents\Visual Studio 2008\Projects\FringeAutocollimator\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe.manifest
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.application
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\fftwlib.dll
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\ZedGraph.xml
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\obj\Debug\FringeAutocollimator.Form1.resources
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\obj\Debug\FringeAutocollimator.Properties.Resources.resources
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\obj\Debug\FringeAutocollimator.csproj.GenerateResource.Cache
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe.manifest
+C:\Users\NPL\Desktop\FringeAutocollimator\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.application
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe.manifest
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.application
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\fftwlib.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\ZedGraph.xml
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\obj\Debug\FringeAutocollimator.Form1.resources
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\obj\Debug\FringeAutocollimator.Properties.Resources.resources
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\obj\Debug\FringeAutocollimator.csproj.GenerateResource.Cache
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe.manifest
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.application
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\obj\Debug\FringeAutocollimator.Form1.resources
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\obj\Debug\FringeAutocollimator.Properties.Resources.resources
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\obj\Debug\FringeAutocollimator.csproj.GenerateResource.Cache
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe.manifest
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.application
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\fftwlib.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\ZedGraph.xml
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe.manifest
+C:\Users\NPL\Desktop\FringeAutocollimator - Copy - Copy\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.application
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe.manifest
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.application
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\fftwlib.dll
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\ZedGraph.xml
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\obj\Debug\FringeAutocollimator.Form1.resources
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\obj\Debug\FringeAutocollimator.Properties.Resources.resources
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\obj\Debug\FringeAutocollimator.csproj.GenerateResource.Cache
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe.manifest
+C:\Users\NPL\Desktop\FringeAutocollimatorCleaned\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.application
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\PylonC.NET.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\PylonC.NET.xml
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\ZedGraph.xml
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\obj\Debug\FringeAutocollimator.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\obj\Debug\FringeAutocollimator.Form1.resources
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\obj\Debug\FringeAutocollimator.Properties.Resources.resources
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\obj\Debug\FringeAutocollimator.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe.config
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\TwinCAT.Ads.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorGraph\FringeAutocollimator\bin\Debug\TwinCAT.Ads.xml
+C:\Users\Administrator\Desktop\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe.config
+C:\Users\Administrator\Desktop\FringeAutocollimatorNoGraph\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\Administrator\Desktop\FringeAutocollimatorNoGraph\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\Administrator\Desktop\FringeAutocollimatorNoGraph\FringeAutocollimator\obj\Debug\FringeAutocollimator.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\FringeAutocollimatorNoGraph\FringeAutocollimator\obj\Debug\FringeAutocollimator.Form1.resources
+C:\Users\Administrator\Desktop\FringeAutocollimatorNoGraph\FringeAutocollimator\obj\Debug\FringeAutocollimator.Properties.Resources.resources
+C:\Users\Administrator\Desktop\FringeAutocollimatorNoGraph\FringeAutocollimator\obj\Debug\FringeAutocollimator.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\Administrator\Desktop\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\Administrator\Desktop\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\PylonC.NET.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\TwinCAT.Ads.dll
+C:\Users\Administrator\Desktop\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\Users\Administrator\Desktop\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\PylonC.NET.xml
+C:\Users\Administrator\Desktop\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\TwinCAT.Ads.xml
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe.config
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraph\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraph\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraph\FringeAutocollimator\obj\Debug\FringeAutocollimator.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraph\FringeAutocollimator\obj\Debug\FringeAutocollimator.Form1.resources
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraph\FringeAutocollimator\obj\Debug\FringeAutocollimator.Properties.Resources.resources
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraph\FringeAutocollimator\obj\Debug\FringeAutocollimator.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\PylonC.NET.dll
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\TwinCAT.Ads.dll
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\PylonC.NET.xml
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraph\FringeAutocollimator\bin\Debug\TwinCAT.Ads.xml
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe.config
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\obj\Debug\FringeAutocollimator.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\obj\Debug\FringeAutocollimator.Form1.resources
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\obj\Debug\FringeAutocollimator.Properties.Resources.resources
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\obj\Debug\FringeAutocollimator.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\PylonC.NET.dll
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\TwinCAT.Ads.dll
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\PylonC.NET.xml
+C:\Users\Administrator\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\TwinCAT.Ads.xml
+C:\Users\controls\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe.config
+C:\Users\controls\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\controls\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\controls\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\controls\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\controls\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\PylonC.NET.dll
+C:\Users\controls\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\TwinCAT.Ads.dll
+C:\Users\controls\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\Users\controls\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\PylonC.NET.xml
+C:\Users\controls\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\bin\Debug\TwinCAT.Ads.xml
+C:\Users\controls\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\obj\Debug\FringeAutocollimator.csprojResolveAssemblyReference.cache
+C:\Users\controls\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\obj\Debug\FringeAutocollimator.Form1.resources
+C:\Users\controls\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\obj\Debug\FringeAutocollimator.Properties.Resources.resources
+C:\Users\controls\Documents\FringeAutocollimatorNoGraphRef\FringeAutocollimator\obj\Debug\FringeAutocollimator.csproj.GenerateResource.Cache
+C:\Users\controls\Documents\BRS2 C#\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe.config
+C:\Users\controls\Documents\BRS2 C#\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\controls\Documents\BRS2 C#\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\controls\Documents\BRS2 C#\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\controls\Documents\BRS2 C#\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\controls\Documents\BRS2 C#\FringeAutocollimator\bin\Debug\PylonC.NET.dll
+C:\Users\controls\Documents\BRS2 C#\FringeAutocollimator\bin\Debug\TwinCAT.Ads.dll
+C:\Users\controls\Documents\BRS2 C#\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\Users\controls\Documents\BRS2 C#\FringeAutocollimator\bin\Debug\PylonC.NET.xml
+C:\Users\controls\Documents\BRS2 C#\FringeAutocollimator\bin\Debug\TwinCAT.Ads.xml
+C:\Users\controls\Documents\BRS2 C#\FringeAutocollimator\obj\Debug\FringeAutocollimator.csprojResolveAssemblyReference.cache
+C:\Users\controls\Documents\BRS2 C#\FringeAutocollimator\obj\Debug\FringeAutocollimator.Form1.resources
+C:\Users\controls\Documents\BRS2 C#\FringeAutocollimator\obj\Debug\FringeAutocollimator.Properties.Resources.resources
+C:\Users\controls\Documents\BRS2 C#\FringeAutocollimator\obj\Debug\FringeAutocollimator.csproj.GenerateResource.Cache
+C:\SlowControls\BRS2 C#\L1BRSEY\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe.config
+C:\SlowControls\BRS2 C#\L1BRSEY\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\SlowControls\BRS2 C#\L1BRSEY\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\SlowControls\BRS2 C#\L1BRSEY\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\SlowControls\BRS2 C#\L1BRSEY\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\SlowControls\BRS2 C#\L1BRSEY\FringeAutocollimator\bin\Debug\PylonC.NET.dll
+C:\SlowControls\BRS2 C#\L1BRSEY\FringeAutocollimator\bin\Debug\TwinCAT.Ads.dll
+C:\SlowControls\BRS2 C#\L1BRSEY\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\SlowControls\BRS2 C#\L1BRSEY\FringeAutocollimator\bin\Debug\PylonC.NET.xml
+C:\SlowControls\BRS2 C#\L1BRSEY\FringeAutocollimator\bin\Debug\TwinCAT.Ads.xml
+C:\SlowControls\BRS2 C#\L1BRSEY\FringeAutocollimator\obj\Debug\FringeAutocollimator.csprojResolveAssemblyReference.cache
+C:\SlowControls\BRS2 C#\L1BRSEY\FringeAutocollimator\obj\Debug\FringeAutocollimator.Form1.resources
+C:\SlowControls\BRS2 C#\L1BRSEY\FringeAutocollimator\obj\Debug\FringeAutocollimator.Properties.Resources.resources
+C:\SlowControls\BRS2 C#\L1BRSEY\FringeAutocollimator\obj\Debug\FringeAutocollimator.csproj.GenerateResource.Cache
+C:\SlowControls\BRS2 C#\L1BRSIY\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe.config
+C:\SlowControls\BRS2 C#\L1BRSIY\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\SlowControls\BRS2 C#\L1BRSIY\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\SlowControls\BRS2 C#\L1BRSIY\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\SlowControls\BRS2 C#\L1BRSIY\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\SlowControls\BRS2 C#\L1BRSIY\FringeAutocollimator\bin\Debug\PylonC.NET.dll
+C:\SlowControls\BRS2 C#\L1BRSIY\FringeAutocollimator\bin\Debug\TwinCAT.Ads.dll
+C:\SlowControls\BRS2 C#\L1BRSIY\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\SlowControls\BRS2 C#\L1BRSIY\FringeAutocollimator\bin\Debug\PylonC.NET.xml
+C:\SlowControls\BRS2 C#\L1BRSIY\FringeAutocollimator\bin\Debug\TwinCAT.Ads.xml
+C:\SlowControls\BRS2 C#\L1BRSIY\FringeAutocollimator\obj\Debug\FringeAutocollimator.csprojResolveAssemblyReference.cache
+C:\SlowControls\BRS2 C#\L1BRSIY\FringeAutocollimator\obj\Debug\FringeAutocollimator.Form1.resources
+C:\SlowControls\BRS2 C#\L1BRSIY\FringeAutocollimator\obj\Debug\FringeAutocollimator.Properties.Resources.resources
+C:\SlowControls\BRS2 C#\L1BRSIY\FringeAutocollimator\obj\Debug\FringeAutocollimator.csproj.GenerateResource.Cache
+C:\Users\Eotwash\Documents\L1BRSIY\FringeAutocollimator\bin\Debug\FringeAutocollimatorWithAnalogOut2.exe.config
+C:\Users\Eotwash\Documents\L1BRSIY\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.exe
+C:\Users\Eotwash\Documents\L1BRSIY\FringeAutocollimator\obj\Debug\FringeAutocollimatorWithAnalogOut2.pdb
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\bin\Debug\BRSReadout.exe.config
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\bin\Debug\BRSReadout.exe
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\bin\Debug\BRSReadout.pdb
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\bin\Debug\fftwlib.xml
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\bin\Debug\TwinCAT.Ads.xml
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\obj\Debug\FringeAutocollimator.csprojResolveAssemblyReference.cache
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\obj\Debug\FringeAutocollimator.Form1.resources
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\obj\Debug\BRSReadout.Properties.Resources.resources
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\obj\Debug\FringeAutocollimator.csproj.GenerateResource.Cache
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\obj\Debug\BRSReadout.exe
+C:\Users\Eotwash\Documents\BRSReadout\FringeAutocollimator\obj\Debug\BRSReadout.pdb
