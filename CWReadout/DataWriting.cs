@@ -10,7 +10,7 @@ using System.Windows.Forms;
  */
 class DataWriting
     {
-        const string DataFilePreFix = "BRS_";
+        const string DataFilePreFix = "CW_";
         const string DataFileSufFix = ".dat";
 
         bool DataWritingOn = false;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BRSReadout;
+using CWReadout;
 
     /*
      * This object takes arrays of unsigned shorts and stores them.

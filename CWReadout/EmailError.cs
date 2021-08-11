@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 
-namespace BRSReadout
+namespace CWReadout
 {
     class EmailError
     {
@@ -33,22 +33,10 @@ namespace BRSReadout
             words.Append(ex.TargetSite);
             words.Append("\n ");
 
-            foreach (string toEmail in emailList)
-            {
-                System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
-                message.To.Add(toEmail);
-                message.Subject = location+" BRS Error Alert";
-                message.From = new System.Net.Mail.MailAddress(fromEmail);
-                message.Body = words.ToString();
-                System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.gmail.com");
-                smtp.Port = 25;
-                smtp.EnableSsl = true;
-                smtp.Credentials = new System.Net.NetworkCredential(user, pass);
-                smtp.Send(message);
-            }
+            
             try
             {
-                string dir = Form1.curDirec + "\\BRSLog.txt";
+                string dir = Form1.curDirec + "\\CWLog.txt";
                 StreamWriter w = File.AppendText(dir);
                 w.Write("\r\nLog Entry : ");
                 w.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(),
@@ -59,6 +47,19 @@ namespace BRSReadout
                 w.Flush();
             }
             catch (Exception){ }
+            //foreach (string toEmail in emailList)
+            //{
+            //    System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
+            //    message.To.Add(toEmail);
+            //    message.Subject = location + " Error Alert";
+            //    message.From = new System.Net.Mail.MailAddress(fromEmail);
+            //    message.Body = words.ToString();
+            //    System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.gmail.com");
+            //    smtp.Port = 25;
+            //    smtp.EnableSsl = true;
+            //    smtp.Credentials = new System.Net.NetworkCredential(user, pass);
+            //    smtp.Send(message);
+            //}
         }
     }
 }

@@ -13,13 +13,15 @@ using System.Windows.Forms;
 using TwinCAT.Ads;
 
 
-namespace BRSReadout
+namespace CWReadout
 {
     public partial class Form1 : Form
     {
         public bool twinCatBool = ("true" == ConfigurationManager.AppSettings.Get("twinCat"));
         public string cameraType = ConfigurationManager.AppSettings.Get("camera");
         public static int camWidth = int.Parse(ConfigurationManager.AppSettings.Get("cameraWidth"));
+
+        public int exposure = int.Parse(ConfigurationManager.AppSettings.Get("cameraExposureTime"));
 
         public static Form2 graphWindow =null;
 
@@ -170,9 +172,12 @@ namespace BRSReadout
                 dataWritingThread.Start();
                 Thread.Sleep(10);
 
-                cameraThread = new Thread(initCamera);
-                cameraThread.Priority = ThreadPriority.Highest;
-                cameraThread.Start();
+                //cameraThread = new Thread(initCamera);
+                //cameraThread.Priority = ThreadPriority.Highest;
+                //cameraThread.Start();
+
+                initCamera();
+
                 curDirec = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
                 System.Diagnostics.Process.Start(curDirec + "\\AffinitySet.bat");
             }
@@ -328,11 +333,14 @@ namespace BRSReadout
         {
             try
             {
+                int cameraNumber, frameGrabErr;
                 myCamera = new Camera();
-                myCamera.cameraInit(cameraType);
+                cameraNumber = myCamera.cameraInit(this.Handle, exposure);
+                setTextBox1(cameraNumber.ToString());
                 Camera.dataDelegate dd = new Camera.dataDelegate(onNewData);
-                myCamera.startFrameGrab(0x8888, 0, dd, cameraType);
-                cameraStatus = 1;
+                frameGrabErr = myCamera.startFrameGrab(0x8888, 0, dd); // Internal Trigger
+
+
             }
             catch (System.Threading.ThreadAbortException) { }
             catch (Exception ex)
@@ -908,8 +916,8 @@ namespace BRSReadout
         {
             int i;
             quittingBool = true;
-            cameraThread.Abort();
-            myCamera.stopFrameGrab(cameraType);
+            //cameraThread.Abort();
+            myCamera.stopFrameGrab();
             dataWritingSyncEvent.ExitThreadEvent.Set();
             for (i = 0; i < consumerd.Length; i++)
             {

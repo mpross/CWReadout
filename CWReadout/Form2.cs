@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace BRSReadout
+namespace CWReadout
 {
     public partial class Form2 : Form
     {

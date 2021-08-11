@@ -1,18 +1,12 @@
-﻿/**     BRSReadout
+﻿/**     CWReadout
  **     
- **     Michael Ross and Krishna Venkateswara
+ **     Michael Ross
  **     Eot-Wash Group
  **     Center for Experimental Nuclear Physics and Astrophysics (CENPA)
  **     University of Washington
  **
- **     Developed Winter 2015
- **
- **     Based on: BRSReadout by Trevor Arp
- **
- **     This program is the Data Aquisition software for a fringe autocollimator to be part of a tiltWash sensor
- **     being developed for the LIGO project.
- **     
- **     Last Updated: 1/15/16
+ **     Developed 2021
+ *
  **/
 
 using System;
@@ -21,7 +15,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace BRSReadout
+namespace CWReadout
 {
     
     static class Program

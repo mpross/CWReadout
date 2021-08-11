@@ -1,6 +1,6 @@
 ﻿
 
-namespace BRSReadout
+namespace CWReadout
 {
     partial class Form2
     {
@@ -60,7 +60,7 @@ namespace BRSReadout
             this.Controls.Add(this.imagePlot);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
-            this.Text = "BRS Graph";
+            this.Text = "CW Graph";
             this.ResumeLayout(false);
 
         }

@@ -8,251 +8,252 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
-using System.IO;
 using System.Threading;
-using System.Configuration;
-using PylonC.NET;
-using TwinCAT.Ads;
-using BRSReadout;
-
 
 /*
- *  Camera Class aquires data coming for the Basler line camera. Must be run in seperate thread to allow for continuous image acquisition.
+ *  Camera Class aquires data coming for the ccd line camera
  */
 class Camera
 {
-    public delegate void frameCallbackDelegate(PylonBuffer<Byte> buffer);
+
+    public delegate void frameCallbackDelegate(int ftype, int row, int col, ref ProcessedData DataProperty, uint BufferPtr);
     public delegate void dataDelegate(ushort[] data);
 
     dataDelegate masterDataDelegate;
-    public static int camWidth = int.Parse(ConfigurationManager.AppSettings.Get("cameraWidth"));
-    public ushort[] data = new ushort[camWidth];
-    public ushort[] sum = new ushort[camWidth];
-    bool frameReverse =bool.Parse(ConfigurationManager.AppSettings.Get("frameReverse"));
+    static bool cameraRunning = false;
+    static bool frameGrabbing = false;
+    static long Noframes = 0;
+    ushort[] data;
+    frameCallbackDelegate frameDelegate;
 
-    // Basler Camera stuff
-    PYLON_DEVICE_HANDLE hDev = new PYLON_DEVICE_HANDLE();
+    [StructLayout(LayoutKind.Explicit)]
+    public struct ProcessedData
+    {
+        [FieldOffset(0)]
+        public int CameraID;
+        [FieldOffset(4)]
+        public int ExposureTime;
+        [FieldOffset(8)]
+        public int TimeStamp;
+        [FieldOffset(12)]
+        public int TriggerOccurred;
+        [FieldOffset(16)]
+        public int TriggerEventOccurred;
+        [FieldOffset(20)]
+        public int OverSaturated;
+        [FieldOffset(24)]
+        public int LightShieldPixelAverage;
+    }
 
-    uint numDevices;
-    PYLON_STREAMGRABBER_HANDLE hGrabber;
-    PYLON_WAITOBJECT_HANDLE hWait;
-    uint payloadSize;
-    Dictionary<PYLON_STREAMBUFFER_HANDLE, PylonBuffer<Byte>> buffers;
-    PylonGrabResult_t grabResult;
+    [DllImport("CCD_USBCamera_SDK_stdcall.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)] //@@ Change dlls to work with new camera
+    private static extern int CCDUSB_InitDevice();
 
-    uint nStreams;
-    bool isAvail;
-    bool isReady;
+    [DllImport("CCD_USBCamera_SDK_stdcall.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+    private static extern int CCDUSB_UnInitDevice();
 
-    PYLON_DEVICE_INFO_HANDLE prop;
-    string ip;
-    string dir = Path.GetDirectoryName(Application.ExecutablePath);
-    uint j;
-    int frameCount = 0;
 
-    int averageNum = int.Parse(ConfigurationManager.AppSettings.Get("frameAverageNum"));
-    int exp = int.Parse(ConfigurationManager.AppSettings.Get("cameraExposureTime"));
+    [DllImport("CCD_USBCamera_SDK_stdcall.dll",
+    CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+    private static extern int CCDUSB_AddDeviceToWorkingSet(int DeviceID);
+
+    [DllImport("CCD_USBCamera_SDK_stdcall.dll",
+    CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+    private static extern int CCDUSB_StartCameraEngine(IntPtr ParentHandle);
+
+    [DllImport("CCD_USBCamera_SDK_stdcall.dll",
+        EntryPoint = "CCDUSB_SetCameraWorkMode",
+    CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+    private static extern int CCDUSB_SetCameraWorkMode(int DeviceID, int WorkMode);
+
+
+    [DllImport("CCD_USBCamera_SDK_stdcall.dll",
+        EntryPoint = "CCDUSB_StartFrameGrab",
+    CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+    private static extern int CCDUSB_StartFrameGrab(int TotalFrames);
+
+    [DllImport("CCD_USBCamera_SDK_stdcall.dll",
+        EntryPoint = "CCDUSB_StopFrameGrab",
+    CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+    private static extern int CCDUSB_StopFrameGrab();
+
+    [DllImport("CCD_USBCamera_SDK_stdcall.dll",
+    CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+    private static extern int CCDUSB_InstallFrameHooker(int FrameType, Delegate FrameCallBack);
+
+    [DllImport("CCD_USBCamera_SDK_stdcall.dll",
+    CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+    private static extern uint CCDUSB_GetCurrentFrame(int Device, IntPtr FramePtr);
+
+    [DllImport("CCD_USBCamera_SDK_stdcall.dll",
+    CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+    private static extern int CCDUSB_SetExposureTime(int DeviceID, int exposureTime, int Store);
+
+    [DllImport("CCD_USBCamera_SDK_stdcall.dll",
+    CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+    private static extern int CCDUSB_ShowFactoryControlPanel(int deviceID, String password);
+
+    [DllImport("CCD_USBCamera_SDK_stdcall.dll",
+        EntryPoint = "CCDUSB_HideFactoryControlPanel", CallingConvention = CallingConvention.StdCall)]
+    private static extern int CCDUSB_HideFactoryControlPanel();
 
     public Camera()
     {
     }
-    public void cameraInit(string cameraType)
+
+    public int cameraInit(IntPtr id, int exp)
     {
-        //Initiates camera to run in 12 bit mode with continuous acquisition.
-        int i = 0;
-        uint NUM_BUFFERS = 10;
-        if (cameraType == "basler")
-        {
-            Pylon.Initialize();
-            numDevices = Pylon.EnumerateDevices();
-            if (ConfigurationManager.AppSettings.Get("ipAddress").Length > 0)
-            {
-                while (ip != ConfigurationManager.AppSettings.Get("ipAddress"))
-                {
-                    hDev = Pylon.CreateDeviceByIndex(j);
-                    prop = Pylon.DeviceGetDeviceInfoHandle(hDev);
-                    ip = Pylon.DeviceInfoGetPropertyValueByIndex(prop, 8);
-                    j++;
-                    if (j > numDevices) { break; }
-                }
-            }
-            else
-            {
-
-                numDevices = Pylon.EnumerateDevices();
-                hDev = Pylon.CreateDeviceByIndex(0);
-            }
-            try
-            {
-                Pylon.DeviceOpen(hDev, Pylon.cPylonAccessModeControl | Pylon.cPylonAccessModeStream);
-            }
-            catch (System.Threading.ThreadAbortException) { }
-            catch (Exception ex)
-            {
-                EmailError.emailAlert(ex);
-                throw (ex);
-            }
-
-            isAvail = Pylon.DeviceFeatureIsAvailable(hDev, "EnumEntry_PixelFormat_Mono12");
-            Pylon.DeviceFeatureFromString(hDev, "PixelFormat", "Mono12");
-            Pylon.DeviceFeatureFromString(hDev, "AcquisitionMode", "Continuous");
-            Pylon.DeviceSetIntegerFeature(hDev, "Height", 1);
-            Pylon.DeviceSetFloatFeature(hDev, "ExposureTimeAbs", exp); //Exposure time is in microseconds and rounded to the closest 100 ns.
-            isAvail = Pylon.DeviceFeatureIsWritable(hDev, "GevSCPSPacketSize");
-            if (isAvail)
-            {
-                Pylon.DeviceSetIntegerFeature(hDev, "GevSCPSPacketSize", 1500);
-            }
-            payloadSize = checked((uint)Pylon.DeviceGetIntegerFeature(hDev, "PayloadSize"));
-            nStreams = Pylon.DeviceGetNumStreamGrabberChannels(hDev);
-            hGrabber = Pylon.DeviceGetStreamGrabber(hDev, 0);
-            Pylon.StreamGrabberOpen(hGrabber);
-            hWait = Pylon.StreamGrabberGetWaitObject(hGrabber);
-            Pylon.StreamGrabberSetMaxNumBuffer(hGrabber, NUM_BUFFERS);
-            Pylon.StreamGrabberSetMaxBufferSize(hGrabber, payloadSize);
-            Pylon.StreamGrabberPrepareGrab(hGrabber);
-            buffers = new Dictionary<PYLON_STREAMBUFFER_HANDLE, PylonBuffer<Byte>>();
-            for (i = 0; i < NUM_BUFFERS; ++i)
-            {
-                PylonBuffer<Byte> buffer = new PylonBuffer<byte>(payloadSize, true);
-                PYLON_STREAMBUFFER_HANDLE handle = Pylon.StreamGrabberRegisterBuffer(hGrabber, ref buffer);
-                buffers.Add(handle, buffer);
-            }
-            i = 0;
-            foreach (KeyValuePair<PYLON_STREAMBUFFER_HANDLE, PylonBuffer<Byte>> pair in buffers)
-            {
-                Pylon.StreamGrabberQueueBuffer(hGrabber, pair.Key, i++);
-            }
-            Pylon.DeviceExecuteCommandFeature(hDev, "AcquisitionStart");
-        }
+        // int a;
+        int errNum;
+        int camNum;
+        //   init();
+        camNum = init();
+        errNum = addCamera(camNum);
+        errNum = addToEngine(id);
+        errNum = setExposure(exp);
+        return errNum;
     }
-    public void frameAveraging(ushort[] data)
-    {
-        // Frame averaging
-        if (averageNum > 0)
-        {
-            for (int i = 0; i < data.Length; i++)
-            {
-                sum[i] += (ushort)(data[i] / averageNum);
-            }
-            frameCount++;
 
-            if (frameCount >= averageNum)
+    private int init()
+    {
+        return CCDUSB_InitDevice();
+    }
+
+    private int unInit()
+    {
+        return CCDUSB_UnInitDevice();
+    }
+
+    private int addCamera(int nr)
+    {
+        return CCDUSB_AddDeviceToWorkingSet(nr);
+    }
+
+    private int addToEngine(IntPtr id)
+    {
+        IntPtr parent_wnd;
+        parent_wnd = id;
+        cameraRunning = true;
+        return CCDUSB_StartCameraEngine(parent_wnd);
+    }
+
+    public void grabbingFrameCallback(int ftype, int row, int col, ref ProcessedData DataProperty, uint BufferPtr)
+    {
+        uint i;
+        uint frameSize;
+        ushort newd;
+
+        uint hibi, lobi;
+
+        Noframes++;
+        unsafe
+        {
+            byte* frameptr;
+            frameSize = (uint)((row * col));
+            data = new ushort[frameSize];
+            frameptr = (byte*)BufferPtr;
+            for (i = 0; i < frameSize; i++)
             {
-                masterDataDelegate(sum);
-                frameCount = 0;
-                sum = new ushort[camWidth];
+                lobi = *frameptr;
+                frameptr++;
+                hibi = *frameptr;
+                frameptr++;
+                newd = (ushort)(hibi * 256 + lobi);
+                //data[i] = data[i] + newd;
+                data[i] = newd;
             }
+        }
+        masterDataDelegate(data);
+    }
+
+
+
+
+
+    public int startFrameGrab(int nr, int trigmode, dataDelegate dd)  // trigmode=0 internal
+    {
+
+        int err1, err2, err3;
+        if (frameGrabbing == true) stopFrameGrab();
+        frameDelegate = new frameCallbackDelegate(grabbingFrameCallback);
+        masterDataDelegate = dd;
+
+        if (trigmode == 0)
+        {
+            err3 = CCDUSB_SetCameraWorkMode(1, 0);
         }
         else
         {
-            masterDataDelegate(data);
+            err3 = CCDUSB_SetCameraWorkMode(1, 1);   // external triggermode
         }
+
+        err2 = CCDUSB_InstallFrameHooker(1, frameDelegate); // I get raw data in this example.
+        err1 = CCDUSB_StartFrameGrab(nr);
+        frameGrabbing = true;
+        if (err1 == -1) return -1;
+        if (err2 == -1) return -2;
+        if (err3 == -1) return -3;
+        return 0;
     }
-    public void startFrameGrab(int nr, int trigmode, dataDelegate dd, string cameraType)
+
+    public int stopFrameGrab()
     {
-        //Start frame grabbing loop and pushes data into the data delegate as a ushort array.
-        int bufferIndex;
-        masterDataDelegate = dd;
 
-        try
-        {
-            while (true)
-            {
-                if (cameraType == "basler")
-                {
-                    PylonBuffer<Byte> buffer;
-                    Pylon.WaitObjectWait(hWait, 100);
+        int err1, err2;
+        err2 = CCDUSB_StopFrameGrab();
+        err1 = CCDUSB_InstallFrameHooker(0, null);
+        if (err1 == -1) return -1;
+        if (err2 == -1) return -2;
+        frameGrabbing = false;
+        return 0;
 
-                    Pylon.StreamGrabberRetrieveResult(hGrabber, out grabResult);
-
-                    bufferIndex = (int)grabResult.Context;
-                    while (buffers.TryGetValue(grabResult.hBuffer, out buffer) != true) ;
-                    Buffer.BlockCopy(buffer.Array, 0, data, 0, buffer.Array.Length);
-                    if (frameReverse)
-                    {
-                        Array.Reverse(data);
-                    }
-                    frameAveraging(data);
-                    Pylon.StreamGrabberQueueBuffer(hGrabber, grabResult.hBuffer, bufferIndex);
-                }
-                else if (cameraType == "none")
-                {
-                    data = new ushort[camWidth];
-                    Random random = new Random();
-                    TimeSpan ts = DateTime.Now.Subtract(new DateTime(2011, 2, 1));
-                    double offset = 300 * Math.Sin(2 * Math.PI * 0.01 * ts.TotalSeconds)-500;
-                    for (int i = 0; i < data.Length; i++)
-                    {
-                        if (i < 40)
-                        {
-                            data[i] = (ushort)(data[i] + random.Next(0, 5));
-                        }
-                        if (i > 40 && i < 1540)
-                        {
-                            data[i] = (ushort)(data[i] + Math.Pow(2, 11)*Math.Abs(Math.Sin(2*Math.PI* i / 300.0)) + random.Next(0, 5));
-                        }
-                        if (i > 1540 && i < 1940 + offset)
-                        {
-                            data[i] = (ushort)(data[i] + random.Next(0, 5));
-                        }
-                        if (i > 1940 + offset && i < 3440 + offset)
-                        {
-                            data[i] = (ushort)(data[i] + Math.Pow(2, 11) * Math.Abs(Math.Sin(2 * Math.PI * (i-offset) / 300.0)) + random.Next(0, 5));
-                        }
-                        if (i > 3440 + offset)
-                        {
-                            data[i] = (ushort)(data[i] + random.Next(0, 5));
-                        }
-                    }
-                    Thread.Sleep(int.Parse(ConfigurationManager.AppSettings.Get("cameraExposureTime")) / 1000);
-                    frameAveraging(data);
-                }
-            }
-        }
-        catch (System.Threading.ThreadAbortException) { }
-        catch (Exception ex)
-        {
-            EmailError.emailAlert(ex);
-            throw (ex);
-        }
     }
 
-    public void stopFrameGrab(string cameraType)
+    private int getCurrentFrame(ushort[] Data)
     {
-        if (cameraType == "basler")
+        IntPtr _pImage = new IntPtr();  //image pointer
+        IntPtr ptr;
+        unsafe
         {
-            //Stops acquisition and closes camera.
-            Pylon.DeviceExecuteCommandFeature(hDev, "AcquisitionStop");
-
-            Pylon.StreamGrabberCancelGrab(hGrabber);
-
-            do
-            {
-                isReady = Pylon.StreamGrabberRetrieveResult(hGrabber, out grabResult);
-
-            } while (isReady);
-
-            foreach (KeyValuePair<PYLON_STREAMBUFFER_HANDLE, PylonBuffer<Byte>> pair in buffers)
-            {
-                Pylon.StreamGrabberDeregisterBuffer(hGrabber, pair.Key);
-                pair.Value.Dispose();
-            }
-            buffers = null;
-
-            Pylon.StreamGrabberFinishGrab(hGrabber);
-
-            Pylon.StreamGrabberClose(hGrabber);
-
-            Pylon.DeviceClose(hDev);
-            Pylon.DestroyDevice(hDev);
-
-            Console.ReadLine();
-
-            Pylon.Terminate();
+            _pImage = Marshal.AllocHGlobal(1 * 2056);
+            ptr = (IntPtr)CCDUSB_GetCurrentFrame(1, _pImage);
+            short[] tmp = new short[2056];
+            Marshal.Copy(ptr, tmp, 0, 2056);
+            Marshal.FreeHGlobal(_pImage);
+            System.Buffer.BlockCopy(tmp, 0, Data, 0, 2056 * 2);
         }
+        return 2056;
+    }
+
+    public int setExposure(int ex)
+    {
+        int a;
+        if (cameraRunning)
+        {
+
+            if ((ex > 0) && (ex < 100000))
+            {
+                a = CCDUSB_SetExposureTime(1, ex, 0);
+                return a;
+            }
+            else return -1;
+        }
+        else return -1;
+    }
+
+
+    public void showPanel()
+    {
+        int a;
+        a = CCDUSB_ShowFactoryControlPanel(1, "123456");
 
     }
+
+    public void hidePanel()
+    {
+        CCDUSB_HideFactoryControlPanel();
+    }
+
+
 }
 
 

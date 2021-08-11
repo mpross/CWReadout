@@ -1,4 +1,4 @@
-﻿namespace BRSReadout
+﻿namespace CWReadout
 {
     partial class Form1
     {
