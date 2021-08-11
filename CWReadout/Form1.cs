@@ -21,7 +21,7 @@ namespace CWReadout
         public string cameraType = ConfigurationManager.AppSettings.Get("camera");
         public static int camWidth = int.Parse(ConfigurationManager.AppSettings.Get("cameraWidth"));
 
-        public int exposure = int.Parse(ConfigurationManager.AppSettings.Get("cameraExposureTime"));
+        public int exposure = (int) double.Parse(ConfigurationManager.AppSettings.Get("cameraExposureTime"));
 
         public static Form2 graphWindow =null;
 
