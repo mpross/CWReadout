@@ -41,8 +41,7 @@ namespace CWReadout
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buRecord = new System.Windows.Forms.Button();
             this.buGraph = new System.Windows.Forms.Button();
-            this.buRecap = new System.Windows.Forms.Button();
-            this.buDamp = new System.Windows.Forms.Button();
+            this.buRecap = new System.Windows.Forms.Button();          
             this.buClear = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -77,14 +76,6 @@ namespace CWReadout
             this.buGraph.Text = "Graph";
             this.buGraph.UseVisualStyleBackColor = true;
             this.buGraph.Click += new System.EventHandler(this.buGraph_Click);
-
-            this.buDamp.Location = new System.Drawing.Point(456, 54);
-            this.buDamp.Name = "cOver";
-            this.buDamp.Size = new System.Drawing.Size(100, 23);
-            this.buDamp.TabIndex = 2;
-            this.buDamp.Text = "Damping Override";
-            this.buDamp.UseVisualStyleBackColor = true;
-            this.buDamp.Click += new System.EventHandler(this.buDamp_Click);
 
             this.buRecap.Location = new System.Drawing.Point(456, 79);
             this.buRecap.Name = "recap";
@@ -234,7 +225,6 @@ namespace CWReadout
             this.Controls.Add(this.buRecord);
             this.Controls.Add(this.buGraph);
             this.Controls.Add(this.buRecap);
-            this.Controls.Add(this.buDamp);
             this.Controls.Add(this.textBox1);
             this.MinimumSize = new System.Drawing.Size(550, 150); // Original 550, 350
             this.Name = "Form1";
@@ -263,7 +253,6 @@ namespace CWReadout
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buRecord;
         private System.Windows.Forms.Button buGraph;
-        private System.Windows.Forms.Button buDamp;
         private System.Windows.Forms.Button buRecap;
         private System.Windows.Forms.Button buClear;
         private System.Windows.Forms.TextBox textBox2;

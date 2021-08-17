@@ -17,7 +17,6 @@ namespace CWReadout
 {
     public partial class Form1 : Form
     {
-        public bool twinCatBool = ("true" == ConfigurationManager.AppSettings.Get("twinCat"));
         public string cameraType = ConfigurationManager.AppSettings.Get("camera");
         public static int camWidth = int.Parse(ConfigurationManager.AppSettings.Get("cameraWidth"));
 
@@ -44,7 +43,7 @@ namespace CWReadout
         volatile bool quittingBool = false;
         public volatile bool recordBool = false;
 
-        double sampFreq = Math.Pow(10, 6) / double.Parse(ConfigurationManager.AppSettings.Get("cameraExposureTime"))/ double.Parse(ConfigurationManager.AppSettings.Get("frameAverageNum"));
+        double sampFreq = Math.Pow(10, 6) / double.Parse(ConfigurationManager.AppSettings.Get("cameraExposureTime")) / double.Parse(ConfigurationManager.AppSettings.Get("frameAverageNum"));
 
         public volatile int Frameco = 0;        
         ushort[] refFrame = new ushort[camWidth];
@@ -67,11 +66,6 @@ namespace CWReadout
 
         static double refGain = double.Parse(ConfigurationManager.AppSettings.Get("refGain"));
         static double angleGain = double.Parse(ConfigurationManager.AppSettings.Get("angleGain"));
-        static double velGain = double.Parse(ConfigurationManager.AppSettings.Get("velGain"));
-        static double driftGain = double.Parse(ConfigurationManager.AppSettings.Get("driftGain"));
-        static double driftOffset = double.Parse(ConfigurationManager.AppSettings.Get("driftOffset"));
-        static double driftOverGain = double.Parse(ConfigurationManager.AppSettings.Get("driftOverGain"));
-        static double driftOverOffset = double.Parse(ConfigurationManager.AppSettings.Get("driftOverOffset"));
 
 
         double voltagewrite = 0;
@@ -135,23 +129,13 @@ namespace CWReadout
             try
             {
                 initTime = DateTime.Now;
-                //Calls calculation method for filters
-                highCoeff = filterCoeff(double.Parse(ConfigurationManager.AppSettings.Get("angleHighPass")), sampFreq / bufferSize, "High");
+                //Calls calculation method for filter
                 lowCoeff = filterCoeff(double.Parse(ConfigurationManager.AppSettings.Get("angleLowPass")), sampFreq / bufferSize, "Low");
-                bandHighCoeff = filterCoeff(double.Parse(ConfigurationManager.AppSettings.Get("velocityHighPass")), sampFreq / bufferSize, "High");
-                bandLowCoeff = filterCoeff(double.Parse(ConfigurationManager.AppSettings.Get("velocityLowPass")), sampFreq / bufferSize, "Low");//2*10^-2
 
                 InitializeComponent(); // Initializes the visual components
                 SetSize(); // Sets up the size of the window and the corresponding location of the components
                 Frameco = 0;
                 dayFrameCo0 = DayNr.GetDayNr(DateTime.Now);
-                
-                //Initialization of TwinCAT connection. 851 is the port for PLC runtime 1
-
-                if (twinCatBool)
-                {                    
-                    tcAds.Connect(851);
-                }
 
                 myStopwatch = new Stopwatch();
                 dataWritingSyncEvent = new SyncEvents();
@@ -228,7 +212,6 @@ namespace CWReadout
                         values[f, 1] = curItem.Data[f, 1]; //Ref
                     }
                     lowPassedData = lp(values, bufferSize);
-                    dataSend(lowPassedData);
 
                     f = f - 1;
                     if (recordBool)
@@ -350,10 +333,6 @@ namespace CWReadout
                 ds = new AdsStream(4);
                 BinaryWriter bw = new BinaryWriter(ds);
                 bw.Write(cameraStatus);
-                if (twinCatBool)
-                {
-                    tcAds.Write(0x4020, 40, ds);
-                }
                 EmailError.emailAlert(ex);
                 throw (ex);
             }
@@ -724,103 +703,7 @@ namespace CWReadout
                 return;
             }
 
-        }
-
-        //Prepares data to be sent to TwinCAT software
-        private void dataSend(double[] data)
-        {
-            double tilt;
-            double drift = 0;
-            double velocity = 0;
-            double angle = 0;
-            double refAng = 0;
-            angle = data[0];
-            refAng = refGain * (data[1] - refZeroValue);
-            //Has a DC subtraction to help filters. Should be about the center of the signal.
-            if (firstValueCounter < 40)
-            {
-                firstValueCounter++;
-                zeroValue = data[0];
-                refZeroValue = data[1];
-            }
-            xHighPass[0] = angle - zeroValue;
-            xBandLowPass[0] = angle - zeroValue;
-
-            //Drift signal calculation, just scaled signal
-            if (dampOverride)
-            {
-                drift = driftOverGain * (angle - driftOverOffset);
-            }
-            else
-            {
-                drift = driftGain * (angle - driftOffset);
-            }
-            //Drift rail logic
-            if (Math.Abs(drift) >= 32760)
-            {
-                drift = Math.Sign(drift) * 32760;
-
-            }
-
-            //Tilt signal calculations, high pass at 10^-3 Hz then scaling.
-            yHighPass[0] = highCoeff[3] * yHighPass[1] + highCoeff[4] * yHighPass[2] + highCoeff[0] * xHighPass[0] + highCoeff[1] * xHighPass[1] + highCoeff[2] * xHighPass[2];
-            tilt = angleGain * yHighPass[0];
-
-            //Capacitor signal calculations, low passed at Hz then high passed at Hz then differentiated and scaled
-            yBandLowPass[0] = bandLowCoeff[3] * yBandLowPass[1] + bandLowCoeff[4] * yBandLowPass[2] + bandLowCoeff[0] * xBandLowPass[0] + bandLowCoeff[1] * xBandLowPass[1] + bandLowCoeff[2] * xBandLowPass[2];
-            xBandHighPass[0] = yBandLowPass[0];
-            yBandHighPass[0] = bandHighCoeff[3] * yBandHighPass[1] + bandHighCoeff[4] * yBandHighPass[2] + bandHighCoeff[0] * xBandHighPass[0] + bandHighCoeff[1] * xBandHighPass[1] + bandHighCoeff[2] * xBandHighPass[2];
-            velocity = velGain* Math.Round((double)200 / bufferSize) * (yBandHighPass[0] - yBandHighPass[1]);
-
-           
-            if (velocity > 0)
-            {
-                velocity = Math.Sqrt(velocity);
-            }
-            else
-            {
-                velocity = -Math.Sqrt(-velocity);
-            }
-
-            if (Math.Abs(velocity) >= 30760)
-            {
-                velocity = Math.Sign(velocity) * 30760;
-            }
-            if (twinCatBool)
-            {
-                ds = new AdsStream(28);
-                BinaryWriter bw = new BinaryWriter(ds);
-                //Tilt signal. TwinCAT variable tilt at MW0.
-                bw.Write((int)tilt);
-                //Drift signal. TwinCAT variable drift at MW1
-                bw.Write((int)drift);
-                //Velocity signal. TwinCAT variable cap at MW2
-                bw.Write((int)velocity);
-                voltagewrite = velocity / 3276;
-                //Reference signal. TwinCAT variable ref at MW3
-                bw.Write((int)refAng);
-                //C# pulse. Sets TwinCAT variable cPulse=1 at MW4
-                bw.Write((int)1);
-                //Light source status bit at MW5
-                bw.Write((int)lightSourceStatus);
-                //Camera status bit at MW6
-                bw.Write((int)cameraStatus);
-                tcAds.Write(0x4020, 0, ds);
-            }
-
-            xHighPass[2] = xHighPass[1];
-            xHighPass[1] = xHighPass[0];
-            yHighPass[2] = yHighPass[1];
-            yHighPass[1] = yHighPass[0];
-            xBandLowPass[2] = xBandLowPass[1];
-            xBandLowPass[1] = xBandLowPass[0];
-            yBandLowPass[2] = yBandLowPass[1];
-            yBandLowPass[1] = yBandLowPass[0];
-            xBandHighPass[2] = xBandHighPass[1];
-            xBandHighPass[1] = xBandHighPass[0];
-            yBandHighPass[2] = yBandHighPass[1];
-            yBandHighPass[1] = yBandHighPass[0];
-        }
+        }              
 
 
         //===========================GUI=====================
@@ -907,8 +790,7 @@ namespace CWReadout
             buRecord.Location = new Point(ClientRectangle.Width - buRecord.Size.Width - 10, 20);
             buGraph.Location = new Point(ClientRectangle.Width - buGraph.Size.Width - buRecap.Size.Width - 20, ClientRectangle.Height - buGraph.Size.Height - 20);
             buClear.Location = new Point(ClientRectangle.Width - buGraph.Size.Width - buRecap.Size.Width - 20, ClientRectangle.Height - buClear.Size.Height - 50);
-            buRecap.Location = new Point(ClientRectangle.Width - buRecap.Size.Width - 10, ClientRectangle.Height - buRecap.Size.Height - 50);
-            buDamp.Location = new Point(ClientRectangle.Width - buDamp.Size.Width - 10, ClientRectangle.Height - buDamp.Size.Height - 20);
+            buRecap.Location = new Point(ClientRectangle.Width - buRecap.Size.Width - 10, ClientRectangle.Height - buRecap.Size.Height - 50);            
         }
 
 
@@ -1005,21 +887,7 @@ namespace CWReadout
         private void buRecap_Click(object sender, EventArgs e)
         {
             firstFrame = true;
-        }
-        private void buDamp_Click(object sender, EventArgs e)
-        {
-            if (dampOverride)
-            {
-                buDamp.BackColor = System.Drawing.Color.LightGray;
-                dampOverride = false;
-            }
-            else
-            {
-                buDamp.BackColor = System.Drawing.Color.Red;
-                dampOverride = true;
-            }
-
-        }
+        }        
         
 
     }
