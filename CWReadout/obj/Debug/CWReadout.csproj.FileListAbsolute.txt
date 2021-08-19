@@ -17,10 +17,6 @@ G:\Shared drives\Eot-Wash\ColdWash\CWReadout\BRSReadout\CWReadout\obj\Debug\CWRe
 G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\bin\Debug\CWReadout.exe.config
 G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\bin\Debug\CWReadout.exe
 G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\bin\Debug\CWReadout.pdb
-G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\bin\Debug\PylonC.NET.dll
-G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\bin\Debug\TwinCAT.Ads.dll
-G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\bin\Debug\PylonC.NET.xml
-G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\bin\Debug\TwinCAT.Ads.xml
 G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\obj\Debug\CWReadout.csproj.AssemblyReference.cache
 G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\obj\Debug\CWReadout.Properties.Resources.resources
 G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\obj\Debug\CWReadout.csproj.GenerateResource.cache
@@ -30,3 +26,7 @@ G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\obj\Debug\CWReadout.exe
 G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\obj\Debug\CWReadout.pdb
 G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\obj\Debug\CWReadout.Form1.resources
 G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\obj\Debug\CWReadout.Form2.resources
+G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\bin\Debug\NationalInstruments.DAQmx.dll
+G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\bin\Debug\NationalInstruments.Common.dll
+G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\bin\Debug\NationalInstruments.DAQmx.xml
+G:\Shared drives\Eot-Wash\ColdWash\CWReadout\CWReadout\bin\Debug\NationalInstruments.Common.xml

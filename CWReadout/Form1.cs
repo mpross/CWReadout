@@ -10,7 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using TwinCAT.Ads;
+using NationalInstruments;
+using NationalInstruments.DAQmx;
 
 
 namespace CWReadout
@@ -38,8 +39,7 @@ namespace CWReadout
 
         int startIndexRightRef = 1800; //Beginning of right pattern
         int startIndexLeftRef = 0; //Beginning of right pattern
-
-        bool dampOverride = false;
+       
         volatile bool quittingBool = false;
         public volatile bool recordBool = false;
 
@@ -52,7 +52,6 @@ namespace CWReadout
 
         volatile bool dataWritingThreadBool;
         Thread dataWritingThread;
-        Thread cameraThread;
         private Queue<PeakQueueItem> dataWritingQueue;
         public volatile SyncEvents dataWritingSyncEvent;
 
@@ -79,9 +78,6 @@ namespace CWReadout
 
         RawData currentData = new RawData(bufferSize);
 
-        static TcAdsClient tcAds = new TcAdsClient();
-        static AdsStream ds = new AdsStream(16);
-
         public double refLastValue = 0;
         public double angleLastValue = splitPixel;
 
@@ -107,9 +103,6 @@ namespace CWReadout
         double[] lowCoeff = new double[5];
 
         public static string curDirec;
-
-        int lightSourceStatus;
-        int cameraStatus = 1;
 
         public DateTime initTime;
         System.Windows.Forms.Timer plotTimer = new System.Windows.Forms.Timer();
@@ -328,11 +321,6 @@ namespace CWReadout
             catch (System.Threading.ThreadAbortException) { }
             catch (Exception ex)
             {
-                cameraStatus = 0;
-                //Camera status bit
-                ds = new AdsStream(4);
-                BinaryWriter bw = new BinaryWriter(ds);
-                bw.Write(cameraStatus);
                 EmailError.emailAlert(ex);
                 throw (ex);
             }
@@ -405,6 +393,8 @@ namespace CWReadout
             double xxy = 0;
             double b, c, D, Db, Dc;// a,b, and c are the values we solve for then derive mu,sigma, and A from them.
 
+            double[] envData;
+
             if (quittingBool)
             {
                 return;
@@ -412,6 +402,9 @@ namespace CWReadout
             
             timestamps = new long[bufferSize];
             newdata = new double[bufferSize, 2];
+
+            envData = Daq.Pull();
+            setTextBox5(envData.ToString());
 
             for (int frameNo = 0; frameNo < bufferSize; frameNo++)
             {
@@ -579,13 +572,7 @@ namespace CWReadout
                                 if (frame[j] > threshold)
                                 {
                                     startIndexLeft = j - pixelMargin;
-                                    lightSourceStatus = 1;
                                     break;
-                                }
-
-                                if (j == frame.Length - 1)
-                                {
-                                    lightSourceStatus = 0;
                                 }
                             }
                             if (startIndexLeft < 0)
@@ -674,14 +661,6 @@ namespace CWReadout
 
                 sum = frame.Select(x => (int)x).Sum();
                 Debug.WriteLine(sum);
-                if (sum == 0)
-                {
-                    lightSourceStatus = 0;
-                }
-                else
-                {
-                    lightSourceStatus = 1;
-                }
             }
 
             quI = new PeakQueueItem(timestamps, newdata);
@@ -763,6 +742,19 @@ namespace CWReadout
                 textBox4.Text = inString;
             }
         }
+        public void setTextBox5(string inString)
+        {
+            if (textBox5.InvokeRequired)
+            {
+                textBox5.BeginInvoke(
+                   new MethodInvoker(
+                   delegate () { setTextBox5(inString); }));
+            }
+            else
+            {
+                textBox5.Text = inString;
+            }
+        }
 
         /*
          *  Sets the size of the box and the corresponding locations of all relevant graphical components
@@ -781,6 +773,7 @@ namespace CWReadout
             textBox3.Location = new Point(iS, coy); iS = iS + textBox3.Width;
             label4.Location = new Point(iS, lay);
             textBox4.Location = new Point(iS, coy); iS = iS + textBox4.Width;
+            textBox5.Location = new Point(10, ClientRectangle.Height-textBox5.Height-20);
             label5.Location = new Point(iS, lay);
             numericUpDown1.Location = new Point(iS, coy); iS = iS + numericUpDown1.Width;
             label6.Location = new Point(iS, lay);
