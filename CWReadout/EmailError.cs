@@ -16,9 +16,9 @@ namespace CWReadout
 
             string[] emailList = ConfigurationManager.AppSettings["emailList"].Split(',');
             String location = ConfigurationManager.AppSettings["location"];
-            String fromEmail = "beamrotation@gmail.com";
-            String user = "beamrotation";
-            String pass = "windyTilt";
+            String fromEmail = "coldwashalert@gmail.com";
+            String user = "coldwashalert";
+            String pass = "F=Gmm/r^2";
 
             words.Append("Message: ");
             words.Append(ex.Message);
