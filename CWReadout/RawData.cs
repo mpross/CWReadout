@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Configuration;
 using CWReadout;
 
     /*
@@ -15,6 +16,7 @@ using CWReadout;
         int length;
         int queueLen;
         int dataco; // The number of data frames in the Object
+
 
         public RawData(int Fr)
         {
@@ -73,6 +75,7 @@ using CWReadout;
             ushort[] ret;
             ret = new ushort[length];
             for (i = 0; i < length; i++) ret[i] = data[frame, i];
+
             return ret;
         }
 

@@ -10,8 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using NationalInstruments;
-using NationalInstruments.DAQmx;
+//using NationalInstruments.DAQmx;
+//using NationalInstruments;
 
 
 namespace CWReadout
@@ -22,6 +22,7 @@ namespace CWReadout
         public static int camWidth = int.Parse(ConfigurationManager.AppSettings.Get("cameraWidth"));
 
         public int exposure = (int) double.Parse(ConfigurationManager.AppSettings.Get("cameraExposureTime"));
+        public bool frameReverse = bool.Parse(ConfigurationManager.AppSettings.Get("frameReverse"));
 
         public static Form2 graphWindow =null;
 
@@ -43,7 +44,7 @@ namespace CWReadout
         volatile bool quittingBool = false;
         public volatile bool recordBool = false;
 
-        double sampFreq = Math.Pow(10, 6) / double.Parse(ConfigurationManager.AppSettings.Get("cameraExposureTime")) / double.Parse(ConfigurationManager.AppSettings.Get("frameAverageNum"));
+        double sampFreq = Math.Pow(10, 6) / (double.Parse(ConfigurationManager.AppSettings.Get("cameraExposureTime")) * double.Parse(ConfigurationManager.AppSettings.Get("frameAverageNum")));
 
         public volatile int Frameco = 0;        
         ushort[] refFrame = new ushort[camWidth];
@@ -74,6 +75,8 @@ namespace CWReadout
         int patternLength = int.Parse(ConfigurationManager.AppSettings.Get("patternLength")); //Length of patterns
 
         static int bufferSize = int.Parse(ConfigurationManager.AppSettings.Get("bufferSize"));
+
+
         public static double[,] newdata = new double[bufferSize, 2];
 
         RawData currentData = new RawData(bufferSize);
@@ -104,6 +107,8 @@ namespace CWReadout
 
         public static string curDirec;
 
+
+
         public DateTime initTime;
         System.Windows.Forms.Timer plotTimer = new System.Windows.Forms.Timer();
         public struct graphData
@@ -122,6 +127,7 @@ namespace CWReadout
             try
             {
                 initTime = DateTime.Now;
+
                 //Calls calculation method for filter
                 lowCoeff = filterCoeff(double.Parse(ConfigurationManager.AppSettings.Get("angleLowPass")), sampFreq / bufferSize, "Low");
 
@@ -393,8 +399,6 @@ namespace CWReadout
             double xxy = 0;
             double b, c, D, Db, Dc;// a,b, and c are the values we solve for then derive mu,sigma, and A from them.
 
-            double[] envData;
-
             if (quittingBool)
             {
                 return;
@@ -403,14 +407,17 @@ namespace CWReadout
             timestamps = new long[bufferSize];
             newdata = new double[bufferSize, 2];
 
-            envData = Daq.Pull();
-            setTextBox5(envData.ToString());
+            //daqPull();
 
             for (int frameNo = 0; frameNo < bufferSize; frameNo++)
             {
                 try
                 {
                     frame = data.getData(frameNo);
+                    if (frameReverse)
+                    {
+                        Array.Reverse(frame);
+                    }
                     if (firstFrame == true)
                     {
                         refFrame = frame;
@@ -682,7 +689,25 @@ namespace CWReadout
                 return;
             }
 
-        }              
+        }   
+        
+        //public void daqPull()
+        //{
+        //    Task analogInTask = new Task();
+        //    AIChannel myAIChannel;
+        //    myAIChannel = analogInTask.AIChannels.CreateVoltageChannel(
+        //        "dev3/ai0",
+        //        "myAIChannel",
+        //        AITerminalConfiguration.Differential,
+        //        0,
+        //        5,
+        //        AIVoltageUnits.Volts
+        //    );
+        //    AnalogSingleChannelReader reader = new
+        //    AnalogSingleChannelReader(analogInTask.Stream);
+        //    double analogDataIn = reader.ReadSingleSample();
+        //    setTextBox5(analogDataIn.ToString());
+        //}
 
 
         //===========================GUI=====================

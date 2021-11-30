@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Threading;
+using System.Configuration;
 
 /*
  *  Camera Class aquires data coming for the ccd line camera
@@ -162,6 +163,7 @@ class Camera
                 data[i] = newd;
             }
         }
+        
         masterDataDelegate(data);
     }
 

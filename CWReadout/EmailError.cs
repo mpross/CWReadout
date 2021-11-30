@@ -33,7 +33,6 @@ namespace CWReadout
             words.Append(ex.TargetSite);
             words.Append("\n ");
 
-            
             try
             {
                 string dir = Form1.curDirec + "\\CWLog.txt";
@@ -46,7 +45,8 @@ namespace CWReadout
                 w.WriteLine("-------------------------------");
                 w.Flush();
             }
-            catch (Exception){ }
+            catch (Exception) { }
+
             foreach (string toEmail in emailList)
             {
                 System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
